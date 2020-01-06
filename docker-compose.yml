@@ -12,7 +12,7 @@ services:
   networks:
    - app-net
  db:
-  image: sntnl-db:0.0.1
+  image: app-db:0.0.1
   command: --default-authentication-plugin=mysql_native_password
   hostname: app-db
   build:
