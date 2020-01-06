@@ -1,0 +1,7 @@
+FROM php:7.2-apache
+RUN docker-php-ext-install mysqli
+COPY src/ /var/www/html
+COPY blogsite.com.conf /etc/apache2/sites-available/
+RUN a2ensite blogsite.com.conf
+RUN service apache2 restart
+EXPOSE 80

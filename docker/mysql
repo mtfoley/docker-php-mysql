@@ -1,0 +1,7 @@
+FROM mysql:8.0
+ENV MYSQL_ROOT_PASSWORD=root \
+    MYSQL_DATABASE=blogsite \
+    MYSQL_USER=bloguser \
+    MYSQL_PASSWORD=hg567
+ADD ./blogsite.sql /docker-entrypoint-initdb.d
+EXPOSE 3306
